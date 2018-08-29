@@ -22,15 +22,15 @@ module.exports = {
               {input: {w:width,h:height}, output: {vertical: 1}};
   	  }
 
-      console.log("Params:", obj);
+      var param = obj;
 
       network.train(training);
       var re = network.run(obj);
 
       var W = re.horizontal;
       var H = re.vertical;
-      console.log("Resultado:", { 'w': W, 'h': H });
-      console.log( "O formato é", (W > H) ? 'Horizontal' : 'Vertical');
+      var format = (W > H) ? "Horizontal" : "Vertical";
+      console.log( "[{Param: { w:"+ param.w +" h:" + param.h + "}},{Result: " + "{ 'w': " + W + ", 'h': " + H + " }" + "},{ Format: "+ format + "}]");
   },
 
   neuralExecute: function(arrObj) {
