@@ -14,8 +14,8 @@ module.exports = {
     console.log("*************************** Treinos ********************************");
       var cnt = 0;
   	  for( var i=0; i<5000; i++ ) {
-          	var width  = Math.floor(Math.random() * 10000);
-        	  var height = Math.floor(Math.random() * 10000);
+          	var width  = Math.floor(Math.random() * 1000);
+        	  var height = Math.floor(Math.random() * 1000);
 
   	        training[cnt++] = (width > height) ?
               {input: {w:width,h:height}, output: {horizontal: 1}} :
